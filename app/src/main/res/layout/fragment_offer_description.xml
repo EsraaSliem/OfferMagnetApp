@@ -1,0 +1,136 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/BackgroudColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+
+    tools:context="com.example.hp.offermagnet.OfferDescription">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/product_image"
+
+                />
+
+            <RatingBar
+                android:id="@+id/rateUser"
+                android:layout_width="185dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/imageProfile"
+                android:background="#000" />
+
+            <TextView
+                android:id="@+id/numberOfUsers"
+                android:layout_width="185dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/rateUser"
+                android:layout_marginBottom="25dp"
+                android:layout_toRightOf="@id/imageProfile"
+                android:gravity="bottom"
+                android:text="3.0 of 5 (250)Reviews"
+                android:textColor="#000"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/numberOfUsers"
+                android:layout_marginBottom="26dp"
+                android:src="@drawable/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/separator"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layoutInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/separator"
+                    android:background="@drawable/layout_shape"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="9dp"
+                        android:fontFamily="Gilroy ☞"
+                        android:text="Info"
+                        android:textColor="#464D53"
+                        android:textSize="21dp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="7dp"
+                        android:text="Lorem ipsum dolor sit amet, meis fabellas ea per. Labitur feugiat facilisi est ne, in sea fugit vivendo sensibus. Zril expetendis eos ei, mea suscipit constituam et. Lorem nonumes ut pro. Cu verterem repudiare appellantur vim."
+                        android:textColor="#464D53" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layoutInfo"
+                    android:background="@drawable/layout_shape"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="9dp"
+                        android:fontFamily="Gilroy ☞"
+                        android:text="Rate from other users"
+                        android:textColor="#464D53"
+                        android:textSize="21dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/sign_back_button"
+                    android:text="rate" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroudColor"
+    tools:context="com.example.hp.offermagnet.Splash1">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPagerSlider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:background="@color/BackgroudColor">
+
+    </android.support.v4.view.ViewPager>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/dots"
+        android:layout_marginTop="400dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:background="@color/BackgroudColor"
+
+        >
+
+    </LinearLayout>
+
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/dots"
+    android:layout_marginBottom="30dp"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/back_slider_button"
+    android:id="@+id/butnSplash"
+    android:textColor="@color/colorFocus"
+    android:text="SKIP"/>
+
+</RelativeLayout>

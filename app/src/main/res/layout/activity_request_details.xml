@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroudColor"
+    tools:context="com.example.hp.offermagnet.RequestDetailsActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/toolbar">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_back"
+            android:id="@+id/back"/>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_marginTop="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageProfile_request"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/product_image" />
+
+            <TextView
+                android:id="@+id/user_name_request"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageProfile_request"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorBlack" />
+
+            <ImageView
+
+                android:id="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_name_request"
+                android:layout_marginTop="10dp"
+
+                android:src="@drawable/divider" />
+
+            <TextView
+                android:id="@+id/num_Join"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/separator"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+
+                android:textColor="@color/colorBlack" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/num_Join"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_below="@id/layoutInfo"
+                    android:background="@drawable/layout_shape"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:src="@drawable/recycler" />
+
+                    <ImageView
+                        android:id="@+id/img_Product"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:textColor="#464D53" />
+
+                    <RelativeLayout
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/layout_shape">
+
+                        <ImageView
+                            android:id="@+id/cal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/path"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/calendar" />
+
+                        <TextView
+                            android:id="@+id/txt_To_request"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/path"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_toRightOf="@+id/cal"
+                            android:text="finish"
+                            android:textColor="@color/colorGray" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txt_Desc_request"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:text="info"
+
+                        android:textColor="#000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/join_Request"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="5dp"
+
+                        android:layout_toRightOf="@+id/addOffer"
+                        android:layout_weight="1"
+                        android:background="@drawable/sign_back_button"
+                        android:text="Join"
+
+                        android:textColorHint="@color/colorWhite" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+
+
+    >
+
+    <group android:checkableBehavior="single"
+
+        >
+        <item
+            android:id="@+id/MyProfile"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Profile" />
+        <item
+            android:id="@+id/Home"
+            android:icon="@drawable/ic_action_name"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/myOrder"
+            android:icon="@drawable/ic_shopping"
+            android:title="My Order" />
+        
+        <item
+            android:id="@+id/wishlist"
+            android:icon="@drawable/ic_wishlist"
+            android:title="Wishlist" />
+
+        <item
+            android:id="@+id/privacy"
+            android:icon="@drawable/ic_privacy"
+            android:title="Privacy shortcuts" />
+        <item
+            android:id="@+id/help"
+            android:icon="@drawable/ic_help"
+            android:title="Help and FAQ" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>

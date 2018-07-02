@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroudColor"
+    tools:context="com.example.hp.offermagnet.DetailsActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/toolbar">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_back"
+            android:id="@+id/back"
+      />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageProfile_1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="15dp"
+                android:src="@drawable/product_image" />
+
+            <RatingBar
+                android:id="@+id/rateUser_1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/imageProfile_1"
+                android:numStars="5"
+                android:theme="@style/RatingBar" />
+
+            <TextView
+                android:id="@+id/numberOfUsers_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rateUser_1"
+                android:layout_marginBottom="25dp"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@id/imageProfile_1"
+                android:gravity="bottom"
+                android:paddingTop="10dp"
+                android:text="3.0 of 5 (250)Reviews"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/numberOfUsers_1"
+                android:layout_marginBottom="26dp"
+                android:src="@drawable/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/separator"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_below="@id/layoutInfo"
+                    android:background="@drawable/layout_shape"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:src="@drawable/recycler" />
+
+                    <ImageView
+                        android:id="@+id/pro_img_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:textColor="#464D53" />
+
+                    <RelativeLayout
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/layout_shape">
+
+                        <ImageView
+                            android:id="@+id/path"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/path" />
+
+                        <TextView
+                            android:id="@+id/txt_date_from"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toRightOf="@+id/path"
+                            android:text="3 days left"
+                            android:textColor="@color/colorGray" />
+
+                        <ImageView
+                            android:id="@+id/cal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/path"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/calendar" />
+
+                        <TextView
+                            android:id="@+id/txt_date_finish"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/path"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_toRightOf="@+id/cal"
+                            android:text="finish"
+
+                            android:textColor="@color/colorGray" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/pro_des_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:text="info"
+                        android:textColor="#000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:id="@+id/share_offer"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/share_gray" />
+
+                    <ImageView
+                        android:id="@+id/star"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/star_garay" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/btn_contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/subbmit_propsal"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_shape"
+                        android:hint="Call "
+                        android:textColorHint="@color/colorWhite" />
+
+                    <Button
+                        android:id="@+id/btn_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/subbmit_propsal"
+                        android:layout_weight="5"
+                        android:background="@drawable/sign_back_button"
+                        android:hint="Rate "
+                        android:textColorHint="@color/colorWhite" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>

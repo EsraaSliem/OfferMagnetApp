@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/compass"
+        android:icon="@drawable/compass"
+        android:title=""
+        ></item>
+    <item android:id="@+id/chat"
+        android:icon="@drawable/chat_icon"
+        android:title=""
+        ></item>
+    <item android:id="@+id/bookmark"
+        android:icon="@drawable/bookmarck_icon"
+        android:title=""
+        ></item>
+    <item android:id="@+id/notify"
+        android:icon="@drawable/bell"
+        android:title=""
+        ></item>
+</menu>

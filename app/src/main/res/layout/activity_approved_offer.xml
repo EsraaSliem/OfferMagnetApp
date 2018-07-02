@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroudColor"
+    tools:context="com.example.hp.offermagnet.ApprovedOfferActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_below="@id/user_name_approve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/layout_shape">
+
+
+            <TextView
+                android:id="@+id/request_Title"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:fontFamily="Gilroy ☞"
+                android:text="Request Title"
+                android:textColor="#3C4960"
+                android:textSize="20dp"
+
+                />
+
+            <TextView
+                android:id="@+id/approved_offer"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/request_Title"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/proposal_shape"
+                android:gravity="top"
+                android:textColor="@color/colorBlack"
+                android:hint="Write your offer here in maximum length 100 char"
+                android:maxLength="100"
+                android:padding="10dp"
+                android:textColorHint="#3C4960"
+
+                />
+
+            <Button
+                android:id="@+id/btn_contact"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/approved_offer"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+
+                android:layout_marginTop="16dp"
+                android:background="@drawable/sign_back_button"
+                android:hint="Contact"
+                android:textColorHint="@color/colorWhite" />
+
+        </RelativeLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_image_offer"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/product_image" />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_name_approve"
+            android:layout_below="@id/user_image_offer"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="Gilroy ☞"
+            android:textColor="@color/colorBlack"
+            android:text="approved user"
+            android:textSize="25dp"
+            />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,84 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hp.offermagnet.SubmittedProposalAcceptOrRejectFragment">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroudColor">
+    <RelativeLayout
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="103dp"
+        android:background="@drawable/layout_shape">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp"
+            android:text="Submitted a proposal"
+            android:textColor="#3C4960"
+            android:textSize="22dp"
+            android:fontFamily="Gilroy ☞"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textTitle"
+
+            />
+        <TextView
+            android:padding="10dp"
+            android:gravity="top"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/textTitle"
+            android:layout_height="wrap_content"
+            android:id="@+id/proposal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginLeft="22dp"
+            android:text="The Submitted Proposal Content"
+            android:textColor="#3C4960"
+            android:maxLength="300"
+
+
+            />
+        <LinearLayout
+            android:layout_below="@id/proposal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+            <ImageButton
+               android:background="@drawable/check_icon"
+                android:layout_width="50dp"
+                android:backgroundTint="@color/colorPrimary"
+
+                android:layout_height="50dp"
+
+
+                />
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="25dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:background="@drawable/close_icon"
+
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="106dp"
+        android:layout_height="106dp"
+        android:src="@drawable/product_image"
+        android:id="@+id/userImage"
+        />
+</RelativeLayout>
+
+</FrameLayout>

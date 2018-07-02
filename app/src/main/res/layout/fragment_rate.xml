@@ -1,0 +1,80 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroudColor"
+    android:id="@+id/RatingFrameLayout"
+    tools:context="com.example.hp.offermagnet.RateFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_marginBottom="70dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="103dp"
+            android:background="@drawable/layout_shape">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="75dp"
+                android:text="Rate The Offer"
+                android:textColor="#3C4960"
+                android:textSize="25dp"
+                android:fontFamily="Gilroy ☞"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/offerTitle"
+
+                />
+            <RatingBar
+
+                android:gravity="top"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/offerTitle"
+                android:layout_height="wrap_content"
+                android:id="@+id/offerOfRequest"
+
+                android:maxLength="100"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorBlack"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+
+
+
+                />
+            <Button
+                android:id="@+id/btnRate"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginBottom="50dp"
+
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:text="Rate"
+                android:textColorHint="@color/colorWhite"
+                android:background="@drawable/sign_back_button"
+                android:layout_below="@id/offerOfRequest"
+                />
+
+        </RelativeLayout>
+        <ImageView
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/product_image"
+            android:id="@+id/userimage"
+            />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

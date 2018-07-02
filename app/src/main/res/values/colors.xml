@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorFocus">#030B19</color>
+    <color name="colorGray">#707070</color>
+    <color name="colorGrayloc">#686868</color>
+    <color name="BackgroudColor">#F9FBFF</color>
+    <color name="NavigationDrawerColor">#0084ff</color>
+    <color name="colorWhite">#FFF</color>
+    <color name="colorText">#95989A</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorspin">#0092F9</color>
+
+</resources>

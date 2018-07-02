@@ -1,0 +1,99 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroudColor"
+    tools:context="com.example.hp.offermagnet.UserTab">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <EditText
+
+        android:fontFamily="Gilroy ☞"
+        android:id="@+id/phoneEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shap_login_signup"
+        android:layout_marginBottom="18dp"
+        android:layout_marginTop="109dp"
+        android:hint="+20|"
+        android:textColor="#000"
+        android:drawableLeft="@drawable/cellphoneiphone"
+        android:paddingLeft="20dp"
+        android:drawablePadding="@dimen/padding_drawable"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:maxLength="11"
+        android:textColorHint="@color/colorGray"
+   android:paddingBottom="10dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"/>
+
+    <EditText
+        android:fontFamily="Gilroy ☞"
+        android:drawablePadding="@dimen/padding_drawable"
+        android:paddingRight="20dp"
+        android:id="@+id/passEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cursorVisible="true"
+        android:hint="Password"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColorHint="@color/colorGray"
+        android:background="@drawable/shap_login_signup"
+        android:layout_marginBottom="21dp"
+        android:textColor="@color/colorBlack"
+        android:drawableLeft="@drawable/lock_reset"
+        android:paddingLeft="20dp"
+        android:layout_below="@id/phoneEditText"
+        android:layout_centerHorizontal="true"
+        android:maxLength="20"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+
+         />
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/BackgroudColor"
+        android:background="@drawable/sign_back_button"
+        android:text="log in"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@id/passEditText"
+android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_centerHorizontal="true"
+        />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/sign"
+        android:layout_below="@id/btnlogin"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_below="@id/imageView3"
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logosignin"
+        android:layout_marginBottom="33dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,47 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hp.offermagnet.FQFragment"
+    android:background="@color/BackgroudColor">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Question and Help"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/terms"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/spinnerCategory"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/layout_shape"
+        android:fontFamily="Gilroy ☞"
+        android:gravity="top"
+        android:text="\nWhat is OfferMagnet ?
+\n This application is considered as Intermediary matcher between consumer and provider (B2C). The purpose of our proposed System to fight the unfair prices for any item and rich to the best price. Here, we reverse the definition of offer term. We help users of the same geographic area with a common interest in certain products or services manage to resist unfair prices or unexpected quality of the provided services. Thus, instead of starting an offer from the producers, we initiating it form consumers. The offer is defined as follows. A user of a group of users initiate a request for certain product or services, based on their locations, new users join them, while producers try to attract this group of users through offers. Finally, the best offer is picked-up by the consumers
+\n How cn you make an Offer ?
+\n Just by clicking on the floating button and insert any offer of any products you want.
+\n Can you cancel joining on requst ?
+\n Of course not because by clicking on join button you become an effective part of offer on request process.
+\n Can you submit more than offer on request ?
+\n Yes, you can
+
+"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:paddingLeft="23dp"
+        android:paddingRight="23dp"
+        android:textColor="@color/colorGray"
+        android:textColorHint="#253041" />
+
+</FrameLayout>

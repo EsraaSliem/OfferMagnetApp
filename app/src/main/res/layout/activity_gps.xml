@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hp.offermagnet.GPSlocation"
+    android:background="@color/BackgroudColor">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/location_image"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_location"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:id="@+id/back"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/divider"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:id="@+id/divider"
+            android:layout_below="@+id/back"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGrayloc"
+            android:layout_below="@+id/divider"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:text="Enable your location"
+            android:id="@+id/txtLOc"
+            android:fontFamily="@string/fontUsed"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGrayloc"
+            android:layout_below="@+id/txtLOc"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@string/fontUsed"
+            android:gravity="center"
+            android:text="Turn on your location to track yo bus realtime"
+            android:id="@+id/txt2loc"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt2loc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/sign_back_button"
+            android:text="Turn on location"
+            android:id="@+id/turnOnL"
+            android:textAlignment="center"
+            android:textColor="@color/BackgroudColor"
+            android:layout_marginRight="200dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

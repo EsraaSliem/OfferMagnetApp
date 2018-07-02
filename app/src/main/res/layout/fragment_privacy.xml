@@ -1,0 +1,46 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hp.offermagnet.PrivacyFragment"
+    android:background="@color/BackgroudColor">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Terms And Conditions"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/terms"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/spinnerCategory"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/layout_shape"
+        android:fontFamily="Gilroy ☞"
+        android:gravity="top"
+        android:text="\n\n OfferMagnet is not available to persons whose membership has been suspended or blocked by the system according to their behavior.
+\n•	The membership of offerMagnet is not available to persons under the age of 18 years.
+\n•	No person may register as a member of the system more than once.
+\n•	The system has the right to block or withdraw a person who provide any information that is untrue, inaccurate, not current or incomplete for customers.
+\n•	As far as the law allows, the user is solely responsible for his own request or offer posted on, he can update or delete its own requests.
+\nOn becoming a member of the system, a member must agree:
+\n•	He is responsible for maintaining the confidentiality of, and restricting access to and use of, his account and password, and accept responsibility for all activities that occur under his account and password. He must agree to immediately notify offerMagnet of any unauthorized use of his password or account or any other breach of security.
+\n•	He can contact with the providers by joining to the request and comment on it.
+\n•	Providers must specify the price of the items that offer for.
+"
+        android:inputType="textMultiLine"
+        android:maxLength="500"
+        android:paddingLeft="23dp"
+        android:paddingRight="23dp"
+        android:textColor="@color/colorGray"
+        android:textColorHint="#253041" />
+
+</FrameLayout>

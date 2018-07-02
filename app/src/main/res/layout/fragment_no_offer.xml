@@ -1,0 +1,54 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hp.offermagnet.No_offer"
+    android:background="@color/BackgroudColor">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/warning"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="44dp"
+                android:id="@+id/warning"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/warning"
+                android:background="@drawable/divider"
+                android:layout_marginTop="30dp"
+                android:id="@+id/divider"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_marginRight="20dp"
+                android:layout_below="@id/divider"
+                android:layout_marginTop="10dp"
+                android:text="There is no offers at this time"
+                android:textColor="@color/colorGrayloc"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:id="@+id/txtSubmit"
+                android:fontFamily="@string/fontUsed"
+
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/txtSubmit"
+                android:background="@drawable/back_home"
+                android:layout_marginTop="60dp"/>
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+

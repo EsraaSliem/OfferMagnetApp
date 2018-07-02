@@ -1,0 +1,71 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hp.offermagnet.SubmitProposalFragment">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroudColor">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/layout_shape">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp"
+            android:text="Submit Proposal"
+            android:textColor="#3C4960"
+            android:textSize="22dp"
+            android:fontFamily="Gilroy ☞"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/proposaltitle"
+
+            />
+        <EditText
+            android:padding="10dp"
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_below="@id/proposaltitle"
+            android:layout_height="160dp"
+            android:id="@+id/proposal"
+            android:maxLength="100"
+            android:background="@drawable/proposal_shape"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginLeft="22dp"
+            android:hint="Write your proposal here"
+            android:textColorHint="#3C4960"
+
+            />
+        <Button
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="70dp"
+            android:hint="Submit"
+            android:textColorHint="@color/colorWhite"
+            android:background="@drawable/sign_back_button"
+            android:layout_below="@id/proposal"
+            />
+
+    </RelativeLayout>
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="106dp"
+        android:layout_height="106dp"
+        android:src="@drawable/product_image"
+        android:id="@+id/userimage"
+        />
+
+
+</RelativeLayout>
+
+</FrameLayout>
