@@ -37,7 +37,7 @@
 \n•	Providers must specify the price of the items that offer for.
 "
         android:inputType="textMultiLine"
-        android:maxLength="500"
+        android:scrollbars="vertical"
         android:paddingLeft="23dp"
         android:paddingRight="23dp"
         android:textColor="@color/colorGray"

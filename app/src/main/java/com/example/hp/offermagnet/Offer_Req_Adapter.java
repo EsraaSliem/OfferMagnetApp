@@ -94,7 +94,7 @@ public class Offer_Req_Adapter extends RecyclerView.Adapter<Offer_Req_Adapter.Vi
                             e.printStackTrace();
                         }
 
-                        Toast.makeText(context, response, Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(context, response, Toast.LENGTH_SHORT).show();
                     }
                 }, new Response.ErrorListener() {
             @Override

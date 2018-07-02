@@ -55,16 +55,16 @@ public class Database extends SQLiteOpenHelper {
 
         try {
             db.execSQL(DATABASE_CREATE);
-            Toast.makeText(cont, "database created", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(cont, "database created", Toast.LENGTH_SHORT).show();
         } catch (SQLException e) {
-            Toast.makeText(cont, "database doesn't created " + e.toString(), Toast.LENGTH_SHORT).show();
+            //Toast.makeText(cont, "database doesn't created " + e.toString(), Toast.LENGTH_SHORT).show();
         }
 
         try {
             db.execSQL("insert into " + TABLE_NAME + " ( " + KEY_ID + ", " + KEY_USER_ID + ", " + KEY_NAME + ", " + KEY_GENDER + ", " + KEY_BIRTHDATE + ", " + KEY_CITY + ", " + KEY_PHONE + ", " + KEY_PASSWORD + ", " + KEY_IMAGE + ", " + KEY_STATE + ") values ( '1', 't', 't', 't', '0', '1', 't', 't', '0', '0');");
 
         }catch (SQLException e){
-            Toast.makeText(cont, "not inserted " + e.toString(), Toast.LENGTH_SHORT).show();
+            //Toast.makeText(cont, "not inserted " + e.toString(), Toast.LENGTH_SHORT).show();
 
         }
 

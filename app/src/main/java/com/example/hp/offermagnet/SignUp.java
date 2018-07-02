@@ -266,7 +266,7 @@ protected  void trySignUp(){
                         if (!jsonObject.getString("id").equals("NULL") ) {
 
 
-                            Toast.makeText(getContext().getApplicationContext(), "connect", Toast.LENGTH_LONG).show();
+                          //  Toast.makeText(getContext().getApplicationContext(), "connect", Toast.LENGTH_LONG).show();
 
                             Intent intent = new Intent(getContext(), uploadImage.class);
                             intent.putExtra("user_id",jsonObject.getString("id") );

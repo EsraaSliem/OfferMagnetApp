@@ -61,18 +61,18 @@ public  void onStart() {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_offer, container, false);
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerviewOffer);
-        db=new Database(getActivity());
+
         dataItems = new ArrayList<DataItem>();
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
         db=new Database(getActivity());
-        Toast.makeText(getActivity(),"city is: "+db.getCity(),Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getActivity(),"city is: "+db.getCity(),Toast.LENGTH_SHORT).show();
 
         if(getArguments().getString("srchTxt").equals("")) {
             getAllOfers();
         }else{
             serachText= getArguments().getString("srchTxt");
-            Toast.makeText(getActivity(),"one:::"+serachText,Toast.LENGTH_SHORT).show();
+     //       Toast.makeText(getActivity(),"one:::"+serachText,Toast.LENGTH_SHORT).show();
             setSeacrh(srchTxt);
         }
 
@@ -171,7 +171,7 @@ public  void onStart() {
            @Override
            protected Map<String, String> getParams() throws AuthFailureError {
                HashMap<String, String> stringStringHashMap = new HashMap<>();
-               stringStringHashMap.put("city", "zagazig");
+               stringStringHashMap.put("city", db.getCity());
                return stringStringHashMap;
            }
        };

@@ -244,7 +244,7 @@ public class SubmitRequestFragment extends Fragment {
                     //Uploading code
                     try {
                         String uploadId = UUID.randomUUID().toString();
-                        Toast.makeText(getActivity(), path+"\n"+txtTitle.getText().toString()+"\n"+txtDesc.getText().toString()+"\n"+txtDate.getText().toString(), Toast.LENGTH_SHORT).show();
+                     //   Toast.makeText(getActivity(), path+"\n"+txtTitle.getText().toString()+"\n"+txtDesc.getText().toString()+"\n"+txtDate.getText().toString(), Toast.LENGTH_SHORT).show();
 
                         //Creating a multi part request
                         new MultipartUploadRequest(getActivity(), uploadId, "https://offer-system.000webhostapp.com/InsertRequest.php")

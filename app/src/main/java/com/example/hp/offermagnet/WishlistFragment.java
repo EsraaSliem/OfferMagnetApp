@@ -106,7 +106,7 @@ Database db;
             @Override
             public void onErrorResponse(VolleyError error) {
                 progressDialog.dismiss();
-                Toast.makeText(getActivity(),error.getMessage(),Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getActivity(),error.getMessage(),Toast.LENGTH_SHORT).show();
             }
         }) {
             @Override

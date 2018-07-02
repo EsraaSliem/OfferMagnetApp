@@ -163,13 +163,13 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
                                             e.printStackTrace();
                                         }
                                         progressDialog.dismiss();
-                                        Toast.makeText(context, response, Toast.LENGTH_SHORT).show();
+                                       // Toast.makeText(context, response, Toast.LENGTH_SHORT).show();
                                     }
                                 }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
                                 progressDialog.dismiss();
-                                Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
+                              //  Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         }) {
                             @Override
@@ -193,7 +193,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
                 star_garay.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(context, "Start", Toast.LENGTH_SHORT).show();
+                      //  Toast.makeText(context, "Start", Toast.LENGTH_SHORT).show();
                         final ProgressDialog progressDialog = new ProgressDialog(context);
                         progressDialog.setMessage("Loading ...");
                         progressDialog.setCancelable(false);

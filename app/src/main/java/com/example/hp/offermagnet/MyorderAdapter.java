@@ -158,7 +158,7 @@ public class MyorderAdapter extends RecyclerView.Adapter<MyorderAdapter.ViewHold
 
                                 Log.i("tagconvertstr", "["+response+"]");
                                 txtNumJoin.setText(response+" people join in this offer");
-                                Toast.makeText(context, response, Toast.LENGTH_SHORT).show();
+                               // Toast.makeText(context, response, Toast.LENGTH_SHORT).show();
 
                             }
                         }, new Response.ErrorListener() {
@@ -181,7 +181,7 @@ public class MyorderAdapter extends RecyclerView.Adapter<MyorderAdapter.ViewHold
                 Join.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(context, "Start", Toast.LENGTH_SHORT).show();
+                    //    Toast.makeText(context, "Start", Toast.LENGTH_SHORT).show();
                         final ProgressDialog progressDialog = new ProgressDialog(context);
                         progressDialog.setMessage("Loading ...");
                         progressDialog.setCancelable(false);
@@ -199,14 +199,14 @@ public class MyorderAdapter extends RecyclerView.Adapter<MyorderAdapter.ViewHold
                                         }
                                         progressDialog.dismiss();
                                         Log.i("tagconvertstr", "["+response+"]");
-                                        Toast.makeText(context, response, Toast.LENGTH_SHORT).show();
+                                    //    Toast.makeText(context, response, Toast.LENGTH_SHORT).show();
 
                                     }
                                 }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
                                 progressDialog.dismiss();
-                                Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
+                               // Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         }) {
                             @Override

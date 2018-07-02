@@ -127,11 +127,11 @@ public class LogIn extends Fragment {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                         Toast.makeText(getContext().getApplicationContext(), response, Toast.LENGTH_LONG).show();
+                      //   Toast.makeText(getContext().getApplicationContext(), response, Toast.LENGTH_LONG).show();
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             JSONArray jsonArray = jsonObject.getJSONArray("response");
-                            Toast.makeText(getActivity(), response,Toast.LENGTH_SHORT).show();
+                        //    Toast.makeText(getActivity(), response,Toast.LENGTH_SHORT).show();
                             for (int x = 0; x < jsonArray.length(); x++) {
                                 JSONObject jsonObject1 = jsonArray.getJSONObject(x);
                                 if (jsonObject1.getString("state").equals("OK")) {

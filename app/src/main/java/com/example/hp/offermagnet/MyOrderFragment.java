@@ -75,11 +75,11 @@ public class MyOrderFragment extends Fragment {
 
                             JSONObject jsonObject = new JSONObject(response);
 
-                            Toast.makeText(getActivity(),"response",Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(getActivity(),"response",Toast.LENGTH_SHORT).show();
                             JSONArray jsonArray = jsonObject.getJSONArray("data");
                             for (int i=0; i<jsonArray.length(); i++){
                                 JSONObject object = jsonArray.getJSONObject(i);
-                                Toast.makeText(getActivity(),"converted",Toast.LENGTH_SHORT).show();
+                          //      Toast.makeText(getActivity(),"converted",Toast.LENGTH_SHORT).show();
                                 DataItemRequest item = new DataItemRequest(
                                         object.getString("id"),
                                         object.getString("title"),
@@ -106,7 +106,7 @@ public class MyOrderFragment extends Fragment {
             @Override
             public void onErrorResponse(VolleyError error) {
                 progressDialog.dismiss();
-                Toast.makeText(getActivity(),error.getMessage(),Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(getActivity(),error.getMessage(),Toast.LENGTH_SHORT).show();
             }
         }) {
             @Override

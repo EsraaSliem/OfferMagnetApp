@@ -58,7 +58,7 @@
                     android:layout_marginTop="30dp"
                     android:text="Pizza Deals"
                     android:textColor="@color/colorGrayloc"
-                    android:textSize="15dp"
+                    android:textSize="23dp"
                     android:textStyle="bold" />
 
                 <TextView

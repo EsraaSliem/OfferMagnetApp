@@ -318,7 +318,9 @@ boolean titleOffer=false;
                                 .setMaxRetries(2)
                                 .startUpload();//Starting the upload
 
-
+                        Fragment productDetailFragment = new Offer_Done();
+                        FragmentManager ft = getFragmentManager();
+                        ft.beginTransaction().replace(R.id.offerFrame, productDetailFragment).commit();
                     } catch (Exception exc) {
                         Toast.makeText(getActivity(), exc.getMessage(), Toast.LENGTH_SHORT).show();
                     }
@@ -339,7 +341,7 @@ boolean titleOffer=false;
 
                             if (jsonObject.getString("response").contains("User Added Successfuly!")) {
 
-                                Toast.makeText(getContext().getApplicationContext(), "connect", Toast.LENGTH_LONG).show();
+                            //    Toast.makeText(getContext().getApplicationContext(), "connect", Toast.LENGTH_LONG).show();
                                 Fragment productDetailFragment = new Offer_Done();
                                 FragmentManager ft = getFragmentManager();
                                 ft.beginTransaction().replace(R.id.offerFrame, productDetailFragment).commit();

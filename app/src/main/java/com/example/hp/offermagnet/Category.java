@@ -194,7 +194,7 @@ public class Category extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         if (!response.contains("No parameters ! ")) {
-                            Toast.makeText(Category.this, "connect", Toast.LENGTH_LONG).show();
+                           // Toast.makeText(Category.this, "connect", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(Category.this, UserTab.class);
                             startActivity(intent);
                         } else

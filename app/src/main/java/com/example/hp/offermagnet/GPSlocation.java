@@ -253,7 +253,7 @@ import static android.content.Context.LOCATION_SERVICE;
                     e.printStackTrace();
                 }
 
-                Toast.makeText( this, "" + MyLat + "\n" + MyLong +""+CityName, Toast.LENGTH_LONG ).show();
+                //Toast.makeText( this, "" + MyLat + "\n" + MyLong +""+CityName, Toast.LENGTH_LONG ).show();
                 Intent intent = new Intent(GPSlocation.this, NavDrawer.class);
                 startActivity(intent);
 
