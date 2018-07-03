@@ -1,15 +1,12 @@
 package com.example.hp.offermagnet;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,15 +25,10 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.squareup.picasso.Picasso;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -189,7 +181,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
                 numberOfUsers.setText("( " + dataItem.get(position).getRate() + " of 5 ) " + dataItem.get(position).getPeople() + " Reviews");
                 txtfinish.setText("Online Until " + dataItem.get(position).getDateTo());
                 txtPath.setText("Started From " + dataItem.get(position).getDateFrom());
-                pro_des.setText("Title: " + dataItem.get(position).getTitle() + "\nDescription\n" + dataItem.get(position).getDesc() + "\nPrice: " + dataItem.get(position).getPrice());
+                pro_des.setText("user name: "+dataItem.get(position).getUser_name()+"\nTitle: " + dataItem.get(position).getTitle() + "\nDescription\n" + dataItem.get(position).getDesc() + "\nPrice: " + dataItem.get(position).getPrice());
                 star_garay.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -250,7 +242,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
             public void onClick(View v) {
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
-                String shareBody = "Contact person :"+dataItem.get(position).user_name+"\nTitle: " + dataItem.get(position).getTitle() + "\nDescription\n" + dataItem.get(position).getDesc() + "\nPrice: " + dataItem.get(position).getPrice()+"\n"+
+                String shareBody = "Contact person :"+ dataItem.get(position).getUser_name() +"\nTitle: " + dataItem.get(position).getTitle() + "\nDescription\n" + dataItem.get(position).getDesc() + "\nPrice: " + dataItem.get(position).getPrice()+"\n"+
                         "Started From " + dataItem.get(position).getDateFrom()+"\n"+"Online Until " + dataItem.get(position).getDateTo();
                 String Subject = "New Offer!";
                 sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, Subject);

@@ -45,18 +45,18 @@ import java.util.Map;
 
 
 public class SignUp  extends Fragment  {
-TextView txtDate;
-Button btn,btnSetDate;
-EditText pass ,fname,cpass,phone;;
-Spinner spnGinder, Capital;
+    TextView txtDate;
+    Button btn,btnSetDate;
+    EditText pass ,fname,cpass,phone;;
+    Spinner spnGinder, Capital;
 
-double a=0.0;
+    double a=0.0;
     boolean vn=false;
     boolean vphone=false;
 
     boolean pc=false;
     boolean vpc=false;
-int age;
+    int age;
     private DatePickerDialog.OnDateSetListener DatePicker1;
     User user=new User();
 
@@ -145,7 +145,7 @@ int age;
                 {
                     pass.setError("Required");
                 }
-               else if(pass.getText().length()<8){
+                else if(pass.getText().length()<8){
                     pass.setError("reqiured at least 8 character");
                 }
                 else
@@ -232,15 +232,15 @@ int age;
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              //  Toast.makeText(getContext(), ""+vn+""+pc+""+vphone+""+spnGinder.getSelectedItem().toString(), Toast.LENGTH_LONG).show();
+                //  Toast.makeText(getContext(), ""+vn+""+pc+""+vphone+""+spnGinder.getSelectedItem().toString(), Toast.LENGTH_LONG).show();
                 if(vn&&pc&&vpc&&vphone&&!spnGinder.getSelectedItem().toString().equals("gender")&&!Capital.getSelectedItem().toString().equals("city"))
-                   if(age>18){
-                       trySignUp();
-                   }
-                   else
-                   {
-                       Toast.makeText(getContext(), "you can't register you are under age"+age, Toast.LENGTH_LONG).show();
-                   }
+                    if(age>18){
+                        trySignUp();
+                    }
+                    else
+                    {
+                        Toast.makeText(getContext(), "you can't register you are under age"+age, Toast.LENGTH_LONG).show();
+                    }
                 else
                     Toast.makeText(getContext(), "please fill info"+Capital.getSelectedItem().toString(), Toast.LENGTH_LONG).show();
 
@@ -252,25 +252,26 @@ int age;
         return rootView;
     }
 
-protected  void trySignUp(){
+    protected  void trySignUp(){
 
-    StringRequest postRequest = new StringRequest(Request.Method.POST,"https://offer-system.000webhostapp.com/Register.php",
-            new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                     Toast.makeText(getContext().getApplicationContext(), response, Toast.LENGTH_LONG).show();
-                    try {
+        StringRequest postRequest = new StringRequest(Request.Method.POST,"https://offer-system.000webhostapp.com/Register.php",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                     //   Toast.makeText(getContext().getApplicationContext(), response, Toast.LENGTH_LONG).show();
+                        try {
 
-                        JSONObject jsonObject = new JSONObject(response);
+                            JSONObject jsonObject = new JSONObject(response);
+                            if( jsonObject.getString("id").equals("phone already Exist!"))
+                                Toast.makeText(getContext().getApplicationContext(), "Enter another phone", Toast.LENGTH_LONG).show();
+                            else if (!jsonObject.getString("id").equals("NULL") ) {
 
-                        if (!jsonObject.getString("id").equals("NULL") ) {
 
+                                Toast.makeText(getContext().getApplicationContext(), "connect", Toast.LENGTH_LONG).show();
 
-                          //  Toast.makeText(getContext().getApplicationContext(), "connect", Toast.LENGTH_LONG).show();
-
-                            Intent intent = new Intent(getContext(), uploadImage.class);
-                            intent.putExtra("user_id",jsonObject.getString("id") );
-                            startActivity(intent);
+                                Intent intent = new Intent(getContext(), uploadImage.class);
+                                intent.putExtra("user_id",jsonObject.getString("id") );
+                                startActivity(intent);
 //                            user.setId(Integer.parseInt(jsonObject.getString("id"))+"");
 //                            contact contacts=new contact(user.getId(),fname.getText().toString(),phone.getText().toString());
 //                            final DatabaseHandler db=new DatabaseHandler(getContext());
@@ -279,53 +280,53 @@ protected  void trySignUp(){
 //
 //                            startActivity(intent);
 
-                        } else
+                            } else
 
-                            Toast.makeText(getContext().getApplicationContext(), "error", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getContext().getApplicationContext(), "error", Toast.LENGTH_LONG).show();
 
-                } catch (JSONException e) {
-                        e.printStackTrace();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
                     }
-
-                }
-            }, new Response.ErrorListener() {
-        @Override
-        public void onErrorResponse(VolleyError error) {
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
 
 
-            if (error instanceof ServerError)
-                Toast.makeText(getContext().getApplicationContext(), "Server Error", Toast.LENGTH_SHORT).show();
-            else if (error instanceof TimeoutError)
-                Toast.makeText(getContext().getApplicationContext(), "Connection Timed Out", Toast.LENGTH_SHORT).show();
-            else if (error instanceof NetworkError)
-                Toast.makeText(getContext().getApplicationContext(), "Bad Network Connection", Toast.LENGTH_SHORT).show();
-        }
+                if (error instanceof ServerError)
+                    Toast.makeText(getContext().getApplicationContext(), "Server Error", Toast.LENGTH_SHORT).show();
+                else if (error instanceof TimeoutError)
+                    Toast.makeText(getContext().getApplicationContext(), "Connection Timed Out", Toast.LENGTH_SHORT).show();
+                else if (error instanceof NetworkError)
+                    Toast.makeText(getContext().getApplicationContext(), "Bad Network Connection", Toast.LENGTH_SHORT).show();
+            }
 
-    })
+        })
 
-    {
-        @Override
-        protected Map<String, String> getParams() throws AuthFailureError
         {
-            Map <String,String> param=new HashMap<String, String>() ;
-            param.put("name",fname.getText().toString());
-            param.put("user_phone",phone.getText().toString());
-            param.put("password",pass.getText().toString());
-            param.put("age", String.valueOf(age));
-            param.put("gender",spnGinder.getSelectedItem().toString());
-            param.put("lon",String.valueOf(a));
-            param.put("lat",String.valueOf(a));
-            param.put("captial",Capital.getSelectedItem().toString());
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError
+            {
+                Map <String,String> param=new HashMap<String, String>() ;
+                param.put("name",fname.getText().toString());
+                param.put("user_phone",phone.getText().toString());
+                param.put("password",pass.getText().toString());
+                param.put("age", String.valueOf(age));
+                param.put("gender",spnGinder.getSelectedItem().toString());
+                param.put("lon",String.valueOf(a));
+                param.put("lat",String.valueOf(a));
+                param.put("captial",Capital.getSelectedItem().toString());
 
-            return  param;
+                return  param;
 
-        }
+            }
 
 
-    };
-    Volley.newRequestQueue(getContext()).add(postRequest);
+        };
+        Volley.newRequestQueue(getContext()).add(postRequest);
 
- }
+    }
 
 
 

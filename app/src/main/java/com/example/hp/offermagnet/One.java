@@ -218,7 +218,8 @@ public  void onStart() {
                                        object.getInt("rate"),
                                        object.getString("product_image"),
                                        object.getString("phone"),
-                                       object.getString("people")
+                                       object.getString("people"),
+                                       object.getString("user_name")
                                );
 
                                dataItems.add(item);

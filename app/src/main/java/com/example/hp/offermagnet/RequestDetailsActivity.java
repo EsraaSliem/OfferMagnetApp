@@ -86,7 +86,7 @@ public class RequestDetailsActivity extends AppCompatActivity {
         btnJoin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(RequestDetailsActivity.this, "Start", Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(RequestDetailsActivity.this, "Start", Toast.LENGTH_SHORT).show();
                 final ProgressDialog progressDialog = new ProgressDialog(RequestDetailsActivity.this);
                 progressDialog.setMessage("Loading ...");
                 progressDialog.setCancelable(false);
@@ -104,14 +104,14 @@ public class RequestDetailsActivity extends AppCompatActivity {
                                 }
                                 progressDialog.dismiss();
                                 Log.i("tagconvertstr", "["+response+"]");
-                                Toast.makeText(RequestDetailsActivity.this, response, Toast.LENGTH_SHORT).show();
+                               // Toast.makeText(RequestDetailsActivity.this, response, Toast.LENGTH_SHORT).show();
 
                             }
                         }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         progressDialog.dismiss();
-                        Toast.makeText(RequestDetailsActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                      //  Toast.makeText(RequestDetailsActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }) {
                     @Override

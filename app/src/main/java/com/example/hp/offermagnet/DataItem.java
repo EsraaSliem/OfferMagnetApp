@@ -9,7 +9,7 @@ public class DataItem {
     public String  likes, people;
     public String price;
     int rate;
-    String user_name;
+    private String user_name;
 
     public DataItem(String id, String title, String desc, String imageUrl, String dateFrom, String dateTo, String price, String likes, int rate, String productImageUrl, String phone, String people) {
         this.id = id;
@@ -39,7 +39,7 @@ public class DataItem {
         this.price = price;
         this.likes = likes;
         this.rate = rate;
-        this.user_name=user_name;
+        this.setUser_name(user_name);
     }
 
 
@@ -96,5 +96,13 @@ public class DataItem {
 
     public String getProductImageUrl() {
         return productImageUrl;
+    }
+
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 }
